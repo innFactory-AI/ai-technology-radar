@@ -151,23 +151,22 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
                             {ringEntries.length} {ringEntries.length === 1 ? 'technology' : 'technologies'}
                           </span>
                         </div>
-                        <ul className="grid grid-cols-1 gap-1.5">
+                        <div className="flex flex-wrap gap-2">
                           {ringEntries.map(entry => (
-                            <li key={entry.id}>
-                              <a
-                                href={entry.link}
-                                className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/70 transition-colors group"
-                              >
-                                <span className="flex-shrink-0">
-                                  {getChangeIcon(entry.changeIndicator)}
-                                </span>
-                                <span className="text-slate-700 group-hover:text-slate-900 group-hover:underline text-sm font-medium">
-                                  {entry.name}
-                                </span>
-                              </a>
-                            </li>
+                            <a
+                              key={entry.id}
+                              href={entry.link}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 hover:bg-white border border-slate-200 hover:border-slate-300 transition-all hover:shadow-sm group"
+                            >
+                              <span className="flex-shrink-0">
+                                {getChangeIcon(entry.changeIndicator)}
+                              </span>
+                              <span className="text-slate-700 group-hover:text-slate-900 text-sm font-medium">
+                                {entry.name}
+                              </span>
+                            </a>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     );
                   })}
