@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "id": "data-management",
+      "name": "Data Management",
+      "description": "Tools and platforms for data processing, ETL, and data engineering"
+    },
+    {
+      "id": "languages",
+      "name": "Languages",
+      "description": "Programming languages and frameworks"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "description": "Cloud platforms, containers, and deployment tools"
+    },
+    {
+      "id": "datastores",
+      "name": "Datastores",
+      "description": "Databases, caching systems, and data storage solutions"
+    }
+  ],
+  "rings": [
+    {
+      "id": "adopt",
+      "name": "Adopt",
+      "description": "Technologies we have high confidence in to serve our purpose",
+      "color": "emerald"
+    },
+    {
+      "id": "trial",
+      "name": "Trial",
+      "description": "Technologies worth pursuing in projects that can handle the risk",
+      "color": "blue"
+    },
+    {
+      "id": "assess",
+      "name": "Assess",
+      "description": "Technologies worth exploring with the goal of understanding how it will affect your enterprise",
+      "color": "amber"
+    },
+    {
+      "id": "hold",
+      "name": "Hold",
+      "description": "Technologies not recommended to be used for new projects",
+      "color": "red"
+    }
+  ],
+  "entries": [
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "category": "data-management",
+      "ring": "adopt",
+      "changeIndicator": "up",
+      "link": "/tech/snowflake"
+    },
+    {
+      "id": "apache-spark",
+      "name": "Apache Spark",
+      "category": "data-management",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/apache-spark"
+    },
+    {
+      "id": "dbt",
+      "name": "dbt (Data Build Tool)",
+      "category": "data-management",
+      "ring": "adopt",
+      "changeIndicator": "up",
+      "link": "/tech/dbt"
+    },
+    {
+      "id": "airflow",
+      "name": "Apache Airflow",
+      "category": "data-management",
+      "ring": "trial",
+      "changeIndicator": "same",
+      "link": "/tech/airflow"
+    },
+    {
+      "id": "dagster",
+      "name": "Dagster",
+      "category": "data-management",
+      "ring": "assess",
+      "changeIndicator": "up",
+      "link": "/tech/dagster"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "languages",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/python"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "languages",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/typescript"
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "category": "languages",
+      "ring": "trial",
+      "changeIndicator": "up",
+      "link": "/tech/rust"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "category": "languages",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/go"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "languages",
+      "ring": "hold",
+      "changeIndicator": "down",
+      "link": "/tech/java"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "infrastructure",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/kubernetes"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "category": "infrastructure",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/terraform"
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "category": "infrastructure",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/aws"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "category": "infrastructure",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/docker"
+    },
+    {
+      "id": "pulumi",
+      "name": "Pulumi",
+      "category": "infrastructure",
+      "ring": "assess",
+      "changeIndicator": "up",
+      "link": "/tech/pulumi"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "datastores",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/postgresql"
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "category": "datastores",
+      "ring": "adopt",
+      "changeIndicator": "same",
+      "link": "/tech/redis"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "datastores",
+      "ring": "trial",
+      "changeIndicator": "same",
+      "link": "/tech/mongodb"
+    },
+    {
+      "id": "cassandra",
+      "name": "Apache Cassandra",
+      "category": "datastores",
+      "ring": "assess",
+      "changeIndicator": "down",
+      "link": "/tech/cassandra"
+    },
+    {
+      "id": "elasticsearch",
+      "name": "Elasticsearch",
+      "category": "datastores",
+      "ring": "trial",
+      "changeIndicator": "same",
+      "link": "/tech/elasticsearch"
+    }
+  ]
+}

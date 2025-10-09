@@ -1,25 +1,25 @@
 ---
 import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import TechRadar from '../components/TechRadar';
+import radarData from '../data/tech-radar.json';
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>AI Technology Radar</title>
+		<meta name="description" content="An opinionated guide to technology frontiers in AI and data engineering" />
 	</head>
-
 	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
+		<TechRadar
+			client:load
+			categories={radarData.categories}
+			rings={radarData.rings}
+			entries={radarData.entries}
+		/>
 	</body>
 </html>
