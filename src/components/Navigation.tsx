@@ -29,7 +29,7 @@ export default function Navigation({ logoSrc }: NavigationProps) {
               rel="noopener noreferrer"
               className="text-white hover:text-white/80 transition-colors text-sm font-medium flex items-center gap-1.5"
             >
-              Visit innfactory.ai
+              innfactory.ai
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
             <ThemeSwitcher />
