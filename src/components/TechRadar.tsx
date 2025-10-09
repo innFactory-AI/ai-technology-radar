@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
+import { ArrowUp, ArrowDown, Minus, Check } from 'lucide-react';
 
 interface TechEntry {
   id: string;
@@ -65,11 +65,24 @@ const getChangeIcon = (indicator: 'up' | 'down' | 'same') => {
 };
 
 export default function TechRadar({ categories, rings, entries }: TechRadarProps) {
-  const [selectedRing, setSelectedRing] = useState<string | null>(null);
+  // Initialize with all rings selected
+  const [selectedRings, setSelectedRings] = useState<Set<string>>(
+    new Set(rings.map(r => r.id))
+  );
+
+  const toggleRing = (ringId: string) => {
+    const newSelected = new Set(selectedRings);
+    if (newSelected.has(ringId)) {
+      newSelected.delete(ringId);
+    } else {
+      newSelected.add(ringId);
+    }
+    setSelectedRings(newSelected);
+  };
 
   const getEntriesByCategory = (categoryId: string) => {
     return entries
-      .filter(entry => entry.category === categoryId)
+      .filter(entry => entry.category === categoryId && selectedRings.has(entry.ring))
       .sort((a, b) => a.name.localeCompare(b.name));
   };
 
@@ -77,44 +90,69 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
     return categoryEntries.filter(entry => entry.ring === ringId);
   };
 
+  // Count total visible entries
+  const totalVisibleEntries = useMemo(() => {
+    return entries.filter(entry => selectedRings.has(entry.ring)).length;
+  }, [entries, selectedRings]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-slate-900 mb-4">AI Technology Radar</h1>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold mb-4">AI Technology Radar</h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             An opinionated guide to technology frontiers in AI and data engineering.
             Inspired by ThoughtWorks Technology Radar.
           </p>
         </div>
 
-        {/* Ring Legend */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {rings.map(ring => (
-            <Card
-              key={ring.id}
-              className={`cursor-pointer transition-all hover:shadow-lg ${
-                selectedRing === ring.id ? 'ring-2 ring-offset-2 ring-slate-900' : ''
-              }`}
-              onClick={() => setSelectedRing(selectedRing === ring.id ? null : ring.id)}
-            >
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <div className={`w-3 h-3 rounded-full ${
-                    ring.color === 'emerald' ? 'bg-emerald-500' :
-                    ring.color === 'blue' ? 'bg-blue-500' :
-                    ring.color === 'amber' ? 'bg-amber-500' :
-                    'bg-red-500'
-                  }`} />
-                  {ring.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600">{ring.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Ring Filter/Legend */}
+        <div className="mb-6">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">
+              Filter by Ring
+            </h2>
+            <span className="text-xs text-slate-500">
+              {totalVisibleEntries} shown
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {rings.map(ring => {
+              const isSelected = selectedRings.has(ring.id);
+              return (
+                <div
+                  key={ring.id}
+                  className={`cursor-pointer transition-all px-4 py-2.5 rounded-lg border-2 ${
+                    isSelected
+                      ? 'shadow-sm ' + (
+                          ring.color === 'emerald' ? 'border-emerald-500 bg-emerald-50' :
+                          ring.color === 'blue' ? 'border-blue-500 bg-blue-50' :
+                          ring.color === 'amber' ? 'border-amber-500 bg-amber-50' :
+                          'border-red-500 bg-red-50'
+                        )
+                      : 'border-slate-200 bg-white opacity-50 hover:opacity-70'
+                  }`}
+                  onClick={() => toggleRing(ring.id)}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className={`w-2.5 h-2.5 rounded-full ${
+                        ring.color === 'emerald' ? 'bg-emerald-500' :
+                        ring.color === 'blue' ? 'bg-blue-500' :
+                        ring.color === 'amber' ? 'bg-amber-500' :
+                        'bg-red-500'
+                      }`} />
+                      <span className="font-medium text-sm text-slate-900">{ring.name}</span>
+                    </div>
+                    {isSelected && (
+                      <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Category Cards */}
@@ -130,15 +168,15 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {rings.map(ring => {
+                    if (!selectedRings.has(ring.id)) return null;
+
                     const ringEntries = getEntriesByRing(categoryEntries, ring.id);
                     if (ringEntries.length === 0) return null;
 
                     return (
                       <div
                         key={ring.id}
-                        className={`border-l-4 pl-4 py-3 rounded-r-lg ${getRingBgColor(ring.id, rings)} ${
-                          selectedRing && selectedRing !== ring.id ? 'opacity-40' : 'opacity-100'
-                        } transition-opacity`}
+                        className={`border-l-4 pl-4 py-3 rounded-r-lg ${getRingBgColor(ring.id, rings)} transition-all`}
                       >
                         <div className="flex items-center gap-2 mb-3">
                           <Badge
@@ -170,6 +208,11 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
                       </div>
                     );
                   })}
+                  {categoryEntries.length === 0 && (
+                    <div className="text-center py-8 text-slate-400">
+                      No technologies match the selected filters
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             );

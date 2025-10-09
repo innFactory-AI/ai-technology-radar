@@ -1,7 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
+
+body {
+  font-family: 'Sora Variable', sans-serif;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

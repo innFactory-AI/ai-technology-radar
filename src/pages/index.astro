@@ -1,7 +1,10 @@
 ---
 import '../styles/global.css';
+import '@fontsource-variable/sora';
+import Navigation from '../components/Navigation';
 import TechRadar from '../components/TechRadar';
 import radarData from '../data/tech-radar.json';
+import logo from '../assets/innfactory-ai-consulting-white-400x103.png';
 ---
 
 <!DOCTYPE html>
@@ -13,8 +16,16 @@ import radarData from '../data/tech-radar.json';
 		<meta name="generator" content={Astro.generator} />
 		<title>AI Technology Radar</title>
 		<meta name="description" content="An opinionated guide to technology frontiers in AI and data engineering" />
+		<script is:inline>
+			// Prevent flash of wrong theme
+			const theme = localStorage.getItem('theme') || 'system';
+			if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
 	</head>
 	<body>
+		<Navigation client:load logoSrc={logo.src} />
 		<TechRadar
 			client:load
 			categories={radarData.categories}
