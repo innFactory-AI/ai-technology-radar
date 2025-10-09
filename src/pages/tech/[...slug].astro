@@ -81,7 +81,7 @@ const getChangeText = (indicator: string) => {
       </div>
 
       <!-- Header Card -->
-      <Card class="mb-8 shadow-lg">
+      <Card className="mb-8 shadow-lg">
         <CardHeader>
           <div class="flex flex-wrap gap-2 mb-4">
             <Badge variant="outline" className={ringColors[entry.data.ring]}>
@@ -97,14 +97,14 @@ const getChangeText = (indicator: string) => {
               {getChangeText(entry.data.changeIndicator)}
             </Badge>
           </div>
-          <CardTitle class="text-4xl mb-2">{entry.data.name}</CardTitle>
-          <CardDescription class="text-lg">{entry.data.description}</CardDescription>
+          <CardTitle className="text-4xl mb-2">{entry.data.name}</CardTitle>
+          <CardDescription className="text-lg">{entry.data.description}</CardDescription>
         </CardHeader>
       </Card>
 
       <!-- Content -->
-      <Card class="shadow-lg">
-        <CardContent class="pt-6">
+      <Card className="shadow-lg">
+        <CardContent className="pt-6">
           <article class="prose prose-slate max-w-none">
             <Content />
           </article>

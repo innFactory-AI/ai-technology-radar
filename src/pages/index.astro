@@ -1,26 +1,34 @@
 ---
-import '../styles/global.css';
-import '@fontsource-variable/sora';
-import Navigation from '../components/Navigation';
-import TechRadar from '../components/TechRadar';
-import radarData from '../data/tech-radar.json';
-import logo from '../assets/innfactory-ai-consulting-white-400x103.png';
+import "../styles/global.css";
+import "@fontsource-variable/sora";
+import Navigation from "../components/Navigation";
+import TechRadar from "../components/TechRadar";
+import radarData from "../data/tech-radar.json";
+import logo from "../assets/innfactory-ai-consulting-white-400x103.png";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>AI Technology Radar</title>
-		<meta name="description" content="An opinionated guide to technology frontiers in AI and data engineering" />
+		<title>innFactory AI Radar</title>
+		<meta
+			name="description"
+			content="Der innFactory AI Radar ist eine Sammlung der wichtigsten KI-Technologien und -Quellen für den Mittelstand, ergänzt durch eine Bewertung."
+		/>
 		<script is:inline>
 			// Prevent flash of wrong theme
-			const theme = localStorage.getItem('theme') || 'system';
-			if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.documentElement.classList.add('dark');
+			const theme = localStorage.getItem("theme") || "system";
+			if (
+				theme === "dark" ||
+				(theme === "system" &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
 			}
 		</script>
 	</head>
@@ -32,5 +40,141 @@ import logo from '../assets/innfactory-ai-consulting-white-400x103.png';
 			rings={radarData.rings}
 			entries={radarData.entries as any}
 		/>
+		<div class="max-w-7xl mx-auto">
+			<div class="mt-16">
+				<Card className="shadow-lg">
+					<CardHeader>
+						<CardTitle className="text-3xl"
+							>Was ist der innFactory AI Radar?</CardTitle
+						>
+					</CardHeader>
+					<CardContent className="prose prose-slate max-w-none">
+						<p>
+							Der innFactory AI Radar ist eine Sammlung der
+							wichtigsten KI-Technologien und -Quellen für den
+							Mittelstand, ergänzt durch eine Bewertung.
+						</p>
+
+						<div class="space-y-4 my-6">
+							<div
+								class="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50 rounded-r-lg"
+							>
+								<h3
+									class="text-emerald-900 font-bold text-lg mt-0"
+								>
+									IMPLEMENT
+								</h3>
+								<p class="mb-0 dark:text-gray-900">
+									KI-Technologien und -Quellen, die sich in
+									der Praxis bewährt haben und deren Einsatz
+									in Produktionsumgebungen empfohlen wird.
+									Diese Technologien sind stabil und bieten
+									einen klaren Mehrwert.
+								</p>
+							</div>
+
+							<div
+								class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg"
+							>
+								<h3
+									class="text-blue-900 font-bold text-lg mt-0"
+								>
+									PILOT
+								</h3>
+								<p class="mb-0 dark:text-gray-900">
+									KI-Technologien und -Quellen, die
+									erfolgreich in Pilotprojekten eingesetzt
+									wurden. Sie zeigen vielversprechende
+									Ergebnisse und könnten für den breiten
+									Einsatz in Betracht gezogen werden,
+									erfordern jedoch noch weitere Tests und
+									Erfahrungen.
+								</p>
+							</div>
+
+							<div
+								class="border-l-4 border-amber-500 pl-4 py-2 bg-amber-50 rounded-r-lg"
+							>
+								<h3
+									class="text-amber-900 font-bold text-lg mt-0"
+								>
+									EXPLORE
+								</h3>
+								<p class="mb-0 dark:text-gray-900">
+									KI-Technologien und -Quellen, die neu und
+									vielversprechend sind. Diese Technologien
+									könnten einen erheblichen Mehrwert bieten,
+									sollten aber zunächst in Forschungs- und
+									Prototyping-Projekten getestet werden.
+								</p>
+							</div>
+
+							<div
+								class="border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-r-lg"
+							>
+								<h3
+									class="text-red-900 font-bold text-lg mt-0"
+								>
+									WATCH
+								</h3>
+								<p class="mb-0 dark:text-gray-900">
+									KI-Technologien und -Quellen, die nicht für
+									den sofortigen Einsatz empfohlen werden.
+									Diese Technologien sollten beobachtet
+									werden, da sie sich in Zukunft als nützlich
+									erweisen könnten. Derzeit sollten sie jedoch
+									nicht in neue Projekte integriert werden.
+								</p>
+							</div>
+						</div>
+
+						<h3>Was ist der Zweck?</h3>
+						<p>
+							Der innFactory AI Radar ist ein Tool, um
+							mittelständische Unternehmen bei der Auswahl der
+							besten KI-Technologien für neue Projekte zu
+							inspirieren und zu unterstützen. Er bietet eine
+							Plattform, um Wissen und Erfahrungen zu teilen,
+							Technologieentscheidungen zu reflektieren und unsere
+							Technologielandschaft kontinuierlich
+							weiterzuentwickeln. Basierend auf der Pionierarbeit
+							von ThoughtWorks und Zalando zeigt unser AI Radar
+							die Entwicklungen in der KI-Technologie auf, die für
+							die Softwareentwicklung interessant sind —
+							Veränderungen, die unsere Engineering-Teams beachten
+							und in ihren Projekten nutzen sollten.
+						</p>
+
+						<h3>Wie pflegen wir ihn?</h3>
+						<p>
+							Der innFactory AI Radar wird von unseren KI-Experten
+							gepflegt, die die Diskussionen zur
+							Technologieauswahl in unserer gesamten KI-Strategie
+							vorantreiben und moderieren. Monatlich beobachten
+							wir, wie sich die Technologien und Informationen
+							verändern, um sicherzustellen, dass unsere
+							Empfehlungen stets aktuell und relevant bleiben.
+						</p>
+
+						<p>
+							Besuche unseren{" "}
+							<a
+								href="https://innfactory.ai/blog"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-emerald-600 hover:text-emerald-700 underline"
+							>
+								KI Blog
+							</a>
+							{" "}für weitere Informationen darüber, wie wir die
+							Technologieauswahl angehen und den AI Radar bei
+							innFactory nutzen.
+						</p>
+					</CardContent>
+				</Card>
+			</div>
+
+			
+		</div>
 	</body>
 </html>

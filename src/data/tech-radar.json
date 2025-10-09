@@ -1,212 +1,237 @@
 {
+  "date": "2024.07",
   "categories": [
     {
-      "id": "data-management",
-      "name": "Data Management",
-      "description": "Tools and platforms for data processing, ETL, and data engineering"
+      "id": "ai-tools",
+      "name": "AI-Tools",
+      "description": "Praktische AI Tools und Anwendungen"
     },
     {
-      "id": "languages",
-      "name": "Languages",
-      "description": "Programming languages and frameworks"
+      "id": "ai-models-frameworks",
+      "name": "AI-Models & Frameworks",
+      "description": "Machine Learning-Modelle und Entwicklungs-Frameworks"
     },
     {
-      "id": "infrastructure",
-      "name": "Infrastructure",
-      "description": "Cloud platforms, containers, and deployment tools"
+      "id": "ai-knowledge",
+      "name": "AI-Knowledge & Best Practises",
+      "description": "Researchquellen und Best Practices der Branche"
     },
     {
-      "id": "datastores",
-      "name": "Datastores",
-      "description": "Databases, caching systems, and data storage solutions"
+      "id": "ai-law-governance",
+      "name": "AI-Law & Governance",
+      "description": "Rechtliche Rahmenbedingungen und Governance-Prinzipien"
     }
   ],
   "rings": [
     {
-      "id": "adopt",
-      "name": "Adopt",
-      "description": "Technologies we have high confidence in to serve our purpose",
+      "id": "implement",
+      "name": "IMPLEMENT",
+      "description": "KI-Technologien und -Quellen, die sich in der Praxis bewährt haben",
       "color": "emerald"
     },
     {
-      "id": "trial",
-      "name": "Trial",
-      "description": "Technologies worth pursuing in projects that can handle the risk",
+      "id": "pilot",
+      "name": "PILOT",
+      "description": "KI-Technologien und -Quellen, die erfolgreich in Pilotprojekten eingesetzt wurden",
       "color": "blue"
     },
     {
-      "id": "assess",
-      "name": "Assess",
-      "description": "Technologies worth exploring with the goal of understanding how it will affect your enterprise",
+      "id": "explore",
+      "name": "EXPLORE",
+      "description": "KI-Technologien und -Quellen, die neu und vielversprechend sind",
       "color": "amber"
     },
     {
-      "id": "hold",
-      "name": "Hold",
-      "description": "Technologies not recommended to be used for new projects",
+      "id": "watch",
+      "name": "WATCH",
+      "description": "KI-Technologien und -Quellen, die beobachtet werden sollten",
       "color": "red"
     }
   ],
   "entries": [
     {
-      "id": "snowflake",
-      "name": "Snowflake",
-      "category": "data-management",
-      "ring": "adopt",
-      "changeIndicator": "up",
-      "link": "/tech/snowflake"
-    },
-    {
-      "id": "apache-spark",
-      "name": "Apache Spark",
-      "category": "data-management",
-      "ring": "adopt",
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "ai-tools",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/apache-spark"
+      "link": "https://www.openai.com/chatgpt"
     },
     {
-      "id": "dbt",
-      "name": "dbt (Data Build Tool)",
-      "category": "data-management",
-      "ring": "adopt",
-      "changeIndicator": "up",
-      "link": "/tech/dbt"
-    },
-    {
-      "id": "airflow",
-      "name": "Apache Airflow",
-      "category": "data-management",
-      "ring": "trial",
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "ai-tools",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/airflow"
+      "link": "https://ai.google/gemini"
     },
     {
-      "id": "dagster",
-      "name": "Dagster",
-      "category": "data-management",
-      "ring": "assess",
-      "changeIndicator": "up",
-      "link": "/tech/dagster"
-    },
-    {
-      "id": "python",
-      "name": "Python",
-      "category": "languages",
-      "ring": "adopt",
+      "id": "midjourney",
+      "name": "Midjourney",
+      "category": "ai-tools",
+      "ring": "pilot",
       "changeIndicator": "same",
-      "link": "/tech/python"
+      "link": "https://www.midjourney.com"
     },
     {
-      "id": "typescript",
-      "name": "TypeScript",
-      "category": "languages",
-      "ring": "adopt",
+      "id": "firefly",
+      "name": "Firefly",
+      "category": "ai-tools",
+      "ring": "pilot",
       "changeIndicator": "same",
-      "link": "/tech/typescript"
+      "link": "https://www.adobe.com/sensei/generative-ai/firefly.html"
     },
     {
-      "id": "rust",
-      "name": "Rust",
-      "category": "languages",
-      "ring": "trial",
-      "changeIndicator": "up",
-      "link": "/tech/rust"
-    },
-    {
-      "id": "go",
-      "name": "Go",
-      "category": "languages",
-      "ring": "adopt",
+      "id": "dall-e",
+      "name": "DALL-E",
+      "category": "ai-tools",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/go"
+      "link": "https://www.openai.com/dall-e-2"
     },
     {
-      "id": "java",
-      "name": "Java",
-      "category": "languages",
-      "ring": "hold",
-      "changeIndicator": "down",
-      "link": "/tech/java"
-    },
-    {
-      "id": "kubernetes",
-      "name": "Kubernetes",
-      "category": "infrastructure",
-      "ring": "adopt",
+      "id": "copilot",
+      "name": "Copilot",
+      "category": "ai-tools",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/kubernetes"
+      "link": "https://copilot.github.com"
     },
     {
-      "id": "terraform",
-      "name": "Terraform",
-      "category": "infrastructure",
-      "ring": "adopt",
+      "id": "claude",
+      "name": "Claude",
+      "category": "ai-tools",
+      "ring": "pilot",
       "changeIndicator": "same",
-      "link": "/tech/terraform"
+      "link": "https://www.anthropic.com"
     },
     {
-      "id": "aws",
-      "name": "AWS",
-      "category": "infrastructure",
-      "ring": "adopt",
+      "id": "jasper",
+      "name": "Jasper",
+      "category": "ai-tools",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/aws"
+      "link": "https://www.jasper.ai"
     },
     {
-      "id": "docker",
-      "name": "Docker",
-      "category": "infrastructure",
-      "ring": "adopt",
+      "id": "synthesia",
+      "name": "Synthesia",
+      "category": "ai-tools",
+      "ring": "pilot",
       "changeIndicator": "same",
-      "link": "/tech/docker"
+      "link": "https://www.synthesia.io"
     },
     {
-      "id": "pulumi",
-      "name": "Pulumi",
-      "category": "infrastructure",
-      "ring": "assess",
-      "changeIndicator": "up",
-      "link": "/tech/pulumi"
-    },
-    {
-      "id": "postgresql",
-      "name": "PostgreSQL",
-      "category": "datastores",
-      "ring": "adopt",
+      "id": "pytorch",
+      "name": "PyTorch",
+      "category": "ai-models-frameworks",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/postgresql"
+      "link": "https://pytorch.org"
     },
     {
-      "id": "redis",
-      "name": "Redis",
-      "category": "datastores",
-      "ring": "adopt",
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "category": "ai-models-frameworks",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/redis"
+      "link": "https://www.tensorflow.org"
     },
     {
-      "id": "mongodb",
-      "name": "MongoDB",
-      "category": "datastores",
-      "ring": "trial",
+      "id": "scikit-learn",
+      "name": "Scikit-learn",
+      "category": "ai-models-frameworks",
+      "ring": "implement",
       "changeIndicator": "same",
-      "link": "/tech/mongodb"
+      "link": "https://scikit-learn.org"
     },
     {
-      "id": "cassandra",
-      "name": "Apache Cassandra",
-      "category": "datastores",
-      "ring": "assess",
-      "changeIndicator": "down",
-      "link": "/tech/cassandra"
-    },
-    {
-      "id": "elasticsearch",
-      "name": "Elasticsearch",
-      "category": "datastores",
-      "ring": "trial",
+      "id": "huggingface",
+      "name": "Hugging Face Transformers",
+      "category": "ai-models-frameworks",
+      "ring": "pilot",
       "changeIndicator": "same",
-      "link": "/tech/elasticsearch"
+      "link": "https://huggingface.co/transformers"
+    },
+    {
+      "id": "mlflow",
+      "name": "MLFlow",
+      "category": "ai-models-frameworks",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://mlflow.org"
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "DeepMind Blog",
+      "category": "ai-knowledge",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://www.deepmind.com/blog"
+    },
+    {
+      "id": "openai-blog",
+      "name": "OpenAI Blog",
+      "category": "ai-knowledge",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://www.openai.com/blog"
+    },
+    {
+      "id": "google-ai-blog",
+      "name": "Google AI Blog",
+      "category": "ai-knowledge",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://ai.googleblog.com"
+    },
+    {
+      "id": "facebook-ai-blog",
+      "name": "Facebook AI Blog",
+      "category": "ai-knowledge",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://ai.facebook.com/blog"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "category": "ai-knowledge",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://arxiv.org"
+    },
+    {
+      "id": "infoq-ai",
+      "name": "InfoQ AI",
+      "category": "ai-knowledge",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://www.infoq.com/ai-ml-data-engineering"
+    },
+    {
+      "id": "gdpr",
+      "name": "GDPR",
+      "category": "ai-law-governance",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://commission.europa.eu/law/law-topic/data-protection_de"
+    },
+    {
+      "id": "ai-act",
+      "name": "AI Act",
+      "category": "ai-law-governance",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://artificialintelligenceact.eu/de/"
+    },
+    {
+      "id": "google-ai-principles",
+      "name": "Google AI Principles",
+      "category": "ai-law-governance",
+      "ring": "explore",
+      "changeIndicator": "same",
+      "link": "https://ai.google/principles"
     }
   ]
 }

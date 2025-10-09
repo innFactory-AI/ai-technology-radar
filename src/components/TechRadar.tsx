@@ -100,10 +100,9 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">AI Technology Radar</h1>
+          <h1 className="text-5xl font-bold mb-4">innFactory AI Technology Radar</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            An opinionated guide to technology frontiers in AI and data engineering.
-            Inspired by ThoughtWorks Technology Radar.
+            Der innFactory AI Radar ist eine Sammlung der wichtigsten KI-Technologien und -Quellen für den Mittelstand, ergänzt durch eine Bewertung aus unserer Sicht.
           </p>
         </div>
 
@@ -111,10 +110,10 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
         <div className="mb-6">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">
-              Filter by Ring
+              Filtern nach Kategorie
             </h2>
             <span className="text-xs text-slate-500">
-              {totalVisibleEntries} shown
+              {totalVisibleEntries} angezeigt
             </span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -123,26 +122,24 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
               return (
                 <div
                   key={ring.id}
-                  className={`cursor-pointer transition-all px-4 py-2.5 rounded-lg border-2 ${
-                    isSelected
+                  className={`cursor-pointer transition-all px-4 py-2.5 rounded-lg border-2 ${isSelected
                       ? 'shadow-sm ' + (
-                          ring.color === 'emerald' ? 'border-emerald-500 bg-emerald-50' :
+                        ring.color === 'emerald' ? 'border-emerald-500 bg-emerald-50' :
                           ring.color === 'blue' ? 'border-blue-500 bg-blue-50' :
-                          ring.color === 'amber' ? 'border-amber-500 bg-amber-50' :
-                          'border-red-500 bg-red-50'
-                        )
+                            ring.color === 'amber' ? 'border-amber-500 bg-amber-50' :
+                              'border-red-500 bg-red-50'
+                      )
                       : 'border-slate-200 bg-white opacity-50 hover:opacity-70'
-                  }`}
+                    }`}
                   onClick={() => toggleRing(ring.id)}
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      <div className={`w-2.5 h-2.5 rounded-full ${
-                        ring.color === 'emerald' ? 'bg-emerald-500' :
-                        ring.color === 'blue' ? 'bg-blue-500' :
-                        ring.color === 'amber' ? 'bg-amber-500' :
-                        'bg-red-500'
-                      }`} />
+                      <div className={`w-2.5 h-2.5 rounded-full ${ring.color === 'emerald' ? 'bg-emerald-500' :
+                          ring.color === 'blue' ? 'bg-blue-500' :
+                            ring.color === 'amber' ? 'bg-amber-500' :
+                              'bg-red-500'
+                        }`} />
                       <span className="font-medium text-sm text-slate-900">{ring.name}</span>
                     </div>
                     {isSelected && (
@@ -210,7 +207,7 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
                   })}
                   {categoryEntries.length === 0 && (
                     <div className="text-center py-8 text-slate-400">
-                      No technologies match the selected filters
+                      Keine Einträge in dieser Kategorie.
                     </div>
                   )}
                 </CardContent>
@@ -219,23 +216,25 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
           })}
         </div>
 
+        {/* Information Section */}
         {/* Footer */}
         <div className="mt-16 text-center text-sm text-slate-500">
-          <p>Last updated: {new Date().toLocaleDateString()}</p>
+          <p>Letztes Update: {new Date().toLocaleDateString()}</p>
           <p className="mt-2">
             <span className="inline-flex items-center gap-1">
-              <ArrowUp className="h-3 w-3 text-green-600" /> Moved in
+              <ArrowUp className="h-3 w-3 text-green-600" /> Aufgewertet
             </span>
-            {' · '}
+            {" · "}
             <span className="inline-flex items-center gap-1">
-              <ArrowDown className="h-3 w-3 text-red-600" /> Moved out
+              <ArrowDown className="h-3 w-3 text-red-600" /> Abgewertet
             </span>
-            {' · '}
+            {" · "}
             <span className="inline-flex items-center gap-1">
-              <Minus className="h-3 w-3 text-gray-400" /> No change
+              <Minus className="h-3 w-3 text-gray-400" /> Keine Änderung
             </span>
           </p>
         </div>
+
       </div>
     </div>
   );

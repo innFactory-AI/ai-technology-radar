@@ -4,8 +4,8 @@ const techCollection = defineCollection({
   type: 'content',
   schema: z.object({
     name: z.string(),
-    category: z.enum(['data-management', 'languages', 'infrastructure', 'datastores']),
-    ring: z.enum(['adopt', 'trial', 'assess', 'hold']),
+    category: z.enum(['ai-tools', 'ai-models-frameworks', 'ai-knowledge', 'ai-law-governance']),
+    ring: z.enum(['implement', 'pilot', 'explore', 'watch']),
     changeIndicator: z.enum(['up', 'down', 'same']),
     description: z.string(),
     publishedDate: z.string(),

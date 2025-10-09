@@ -1,7 +1,7 @@
 ---
 name: "Apache Cassandra"
-category: "datastores"
-ring: "assess"
+category: "ai-tools"
+ring: "implement"
 changeIndicator: "down"
 description: "Distributed NoSQL database for handling large amounts of data across many servers"
 publishedDate: "2025-10-09"
