@@ -98,14 +98,6 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
   return (
     <div className="min-h-screen p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">innFactory AI Technology Radar</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Der innFactory AI Radar ist eine Sammlung der wichtigsten KI-Technologien und -Quellen für den Mittelstand, ergänzt durch eine Bewertung aus unserer Sicht.
-          </p>
-        </div>
-
         {/* Ring Filter/Legend */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-3">

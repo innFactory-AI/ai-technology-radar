@@ -34,6 +34,19 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 	</head>
 	<body>
 		<Navigation client:load logoSrc={logo.src} />
+		<div class="max-w-7xl mx-auto">
+			{/* Header */}
+			<div class="text-center mb-12 mt-24">
+				<h1 class="text-5xl font-bold mb-4">
+					innFactory AI Technology Radar
+				</h1>
+				<p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+					Der innFactory AI Radar ist eine Sammlung der wichtigsten
+					KI-Technologien und -Quellen für den Mittelstand, ergänzt
+					durch eine Bewertung aus unserer Sicht.
+				</p>
+			</div>
+		</div>
 		<TechRadar
 			client:load
 			categories={radarData.categories}
@@ -41,7 +54,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 			entries={radarData.entries as any}
 		/>
 		<div class="max-w-7xl mx-auto">
-			<div class="mt-16">
+			<div class="mt-12">
 				<Card className="shadow-lg">
 					<CardHeader>
 						<CardTitle className="text-3xl"
@@ -112,9 +125,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 							<div
 								class="border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-r-lg"
 							>
-								<h3
-									class="text-red-900 font-bold text-lg mt-0"
-								>
+								<h3 class="text-red-900 font-bold text-lg mt-0">
 									WATCH
 								</h3>
 								<p class="mb-0 dark:text-gray-900">
@@ -173,8 +184,25 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 					</CardContent>
 				</Card>
 			</div>
-
-			
 		</div>
+
+		<!-- Footer -->
+		<footer class="border-t border-slate-200 dark:border-slate-800 mt-20">
+			<div class="max-w-7xl mx-auto px-4 py-8">
+				<div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600 dark:text-slate-400">
+					<p>© {new Date().getFullYear()} innFactory AI Consulting GmbH. Alle Rechte vorbehalten.</p>
+					<div class="flex gap-6">
+						<a
+							href="https://innfactory.ai/impressum/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:text-slate-900 dark:hover:text-slate-200 transition-colors"
+						>
+							Impressum
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
