@@ -4,7 +4,7 @@ import { ExternalLink } from 'lucide-react';
 interface NavigationProps {
   logoSrc: string;
 }
-
+//
 export default function Navigation({ logoSrc }: NavigationProps) {
   return (
     <nav className="bg-[#050505] border-b border-white/10">
