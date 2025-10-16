@@ -1,237 +1,381 @@
 {
-  "date": "2024.07",
+  "date": "2025.10",
   "categories": [
     {
-      "id": "ai-tools",
-      "name": "AI-Tools",
-      "description": "Praktische AI Tools und Anwendungen"
+      "id": "ai-core-tech",
+      "name": "KI Platformen & Core Tech",
+      "description": "Fundamentale Modelle, Infrastruktur und Frameworks, die KI-Lösungen antreiben."
     },
     {
-      "id": "ai-models-frameworks",
-      "name": "AI-Models & Frameworks",
-      "description": "Machine Learning-Modelle und Entwicklungs-Frameworks"
+      "id": "entwicklung-automation",
+      "name": "Entwicklung & Automatisierung",
+      "description": "Werkzeuge, Bibliotheken und Plattformen zur Erstellung von KI-Agenten, Automatisierungen und benutzerdefinierten Backends."
     },
     {
-      "id": "ai-knowledge",
-      "name": "AI-Knowledge & Best Practises",
-      "description": "Researchquellen und Best Practices der Branche"
+      "id": "applied-ai-solutions",
+      "name": "Angewandte KI & Lösungen",
+      "description": "Konkrete Endanwender-Anwendungen und von uns entwickelte, einsatzbereite Lösungen."
     },
     {
-      "id": "ai-law-governance",
-      "name": "AI-Law & Governance",
-      "description": "Rechtliche Rahmenbedingungen und Governance-Prinzipien"
+      "id": "governance-enablement",
+      "name": "Governance & Enablement",
+      "description": "Methoden, rechtliche Rahmenbedingungen und Wissensquellen für den verantwortungsvollen und effektiven Einsatz von KI."
     }
   ],
   "rings": [
     {
       "id": "implement",
       "name": "IMPLEMENT",
-      "description": "KI-Technologien und -Quellen, die sich in der Praxis bewährt haben",
+      "description": "Technologien, die wir aktiv in Kundenprojekten einsetzen und empfehlen.",
       "color": "emerald"
     },
     {
       "id": "pilot",
       "name": "PILOT",
-      "description": "KI-Technologien und -Quellen, die erfolgreich in Pilotprojekten eingesetzt wurden",
+      "description": "Technologien, die wir in internen oder ausgewählten Pilotprojekten evaluieren und für vielversprechend halten.",
       "color": "blue"
     },
     {
       "id": "explore",
       "name": "EXPLORE",
-      "description": "KI-Technologien und -Quellen, die neu und vielversprechend sind",
+      "description": "Vielversprechende neue Technologien, mit denen wir erste Erfahrungen sammeln.",
       "color": "amber"
     },
     {
       "id": "watch",
       "name": "WATCH",
-      "description": "KI-Technologien und -Quellen, die beobachtet werden sollten",
+      "description": "Technologien und Trends, die wir beobachten, da sie zukünftig relevant werden könnten.",
       "color": "red"
     }
   ],
   "entries": [
     {
-      "id": "chatgpt",
-      "name": "ChatGPT",
-      "category": "ai-tools",
+      "id": "gpt-4o",
+      "name": "GPT-4o / GPT-4.1",
+      "category": "ai-core-tech",
       "ring": "implement",
       "changeIndicator": "same",
-      "link": "https://www.openai.com/chatgpt"
+      "link": "https://www.openai.com"
     },
     {
-      "id": "gemini",
-      "name": "Gemini",
-      "category": "ai-tools",
+      "id": "gpt-5",
+      "name": "GPT-5",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://www.openai.com"
+    },
+    {
+      "id": "claude-4-5",
+      "name": "Claude 4.5 Sonnet",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://www.anthropic.com"
+    },
+    {
+      "id": "gemini-2-5",
+      "name": "Gemini 2.5 Pro / Flash",
+      "category": "ai-core-tech",
       "ring": "implement",
       "changeIndicator": "same",
-      "link": "https://ai.google/gemini"
+      "link": "https://deepmind.google/technologies/gemini/"
+    },
+    {
+      "id": "gamma-app",
+      "name": "Gamma.app",
+      "category": "applied-ai-solutions",
+      "ring": "pilot",
+      "changeIndicator": "new",
+      "link": "https://gamma.app/"
+    },
+    {
+      "id": "cursor-ide",
+      "name": "Cursor",
+      "category": "applied-ai-solutions",
+      "ring": "pilot",
+      "changeIndicator": "new",
+      "link": "https://cursor.sh/"
+    },
+    {
+      "id": "llama3",
+      "name": "Llama 3",
+      "category": "ai-core-tech",
+      "ring": "pilot",
+      "changeIndicator": "same",
+      "link": "https://ai.meta.com/llama/"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Platform",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://huggingface.co/"
+    },
+    {
+      "id": "chromadb",
+      "name": "ChromaDB",
+      "category": "ai-core-tech",
+      "ring": "pilot",
+      "changeIndicator": "up",
+      "link": "https://www.trychroma.com/"
+    },
+    {
+      "id": "mistral-large",
+      "name": "Mistral Large & Mixtral",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://mistral.ai/"
+    },
+    {
+      "id": "aws-bedrock",
+      "name": "AWS Bedrock",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://aws.amazon.com/bedrock/"
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "category": "ai-core-tech",
+      "ring": "pilot",
+      "changeIndicator": "up",
+      "link": "https://www.pinecone.io/"
+    },
+    {
+      "id": "docker-kubernetes",
+      "name": "Docker / Kubernetes für KI",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://www.docker.com/"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://n8n.io/"
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://www.langchain.com/"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://claude.com/product/claude-code"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://github.com/google-gemini/gemini-cli"
+    },
+    {
+      "id": "fonio",
+      "name": "Fonio",
+      "category": "applied-ai-solutions",
+      "ring": "pilot",
+      "changeIndicator": "new",
+      "link": "https://fonio.ai/"
+    },
+    {
+      "id": "mcp",
+      "name": "Model Context Protocol",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://modelcontextprotocol.org/"
+    },
+    {
+      "id": "pgvector",
+      "name": "pgvector",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://github.com/pgvector/pgvector"
+    },
+    {
+      "id": "nano-banan",
+      "name": "Google Nano Banana",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "new",
+      "link": "https://gemini.google/lu/overview/image-generation/?hl=de"
+    },
+    {
+      "id": "a2a",
+      "name": "Agent-to-Agent Communication (A2A)",
+      "category": "entwicklung-automation",
+      "ring": "explore",
+      "changeIndicator": "up",
+      "link": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://langchain-ai.github.io/langgraph/"
+    },
+    {
+      "id": "langsmith",
+      "name": "LangSmith",
+      "category": "entwicklung-automation",
+      "ring": "pilot",
+      "changeIndicator": "up",
+      "link": "https://langsmith.com/"
+    },
+    {
+      "id": "azure-openai",
+      "name": "Azure OpenAI Service",
+      "category": "ai-core-tech",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/"
+    },
+    {
+      "id": "firecrawl",
+      "name": "FireCrawl",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "new",
+      "link": "https://firecrawl.dev/"
+    },
+    {
+      "id": "human-in-the-loop",
+      "name": "Human-in-the-Loop (HITL)",
+      "category": "governance-enablement",
+      "ring": "implement",
+      "changeIndicator": "new",
+      "link": null
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "entwicklung-automation",
+      "ring": "implement",
+      "changeIndicator": "moved",
+      "link": "https://copilot.github.com"
+    },
+    {
+      "id": "autogen",
+      "name": "Microsoft AutoGen",
+      "category": "entwicklung-automation",
+      "ring": "explore",
+      "changeIndicator": "up",
+      "link": "https://microsoft.github.io/autogen/"
+    },
+    {
+      "id": "companygpt",
+      "name": "CompanyGPT",
+      "category": "applied-ai-solutions",
+      "ring": "implement",
+      "changeIndicator": "same",
+      "link": "https://company-gpt.com/"
     },
     {
       "id": "midjourney",
       "name": "Midjourney",
-      "category": "ai-tools",
-      "ring": "pilot",
+      "category": "applied-ai-solutions",
+      "ring": "implement",
       "changeIndicator": "same",
       "link": "https://www.midjourney.com"
     },
     {
-      "id": "firefly",
-      "name": "Firefly",
-      "category": "ai-tools",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://www.adobe.com/sensei/generative-ai/firefly.html"
-    },
-    {
-      "id": "dall-e",
-      "name": "DALL-E",
-      "category": "ai-tools",
+      "id": "dall-e-3",
+      "name": "DALL-E 3",
+      "category": "applied-ai-solutions",
       "ring": "implement",
       "changeIndicator": "same",
-      "link": "https://www.openai.com/dall-e-2"
-    },
-    {
-      "id": "copilot",
-      "name": "Copilot",
-      "category": "ai-tools",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://copilot.github.com"
-    },
-    {
-      "id": "claude",
-      "name": "Claude",
-      "category": "ai-tools",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://www.anthropic.com"
-    },
-    {
-      "id": "jasper",
-      "name": "Jasper",
-      "category": "ai-tools",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://www.jasper.ai"
+      "link": "https://openai.com/dall-e-3"
     },
     {
       "id": "synthesia",
       "name": "Synthesia",
-      "category": "ai-tools",
+      "category": "applied-ai-solutions",
       "ring": "pilot",
-      "changeIndicator": "same",
+      "changeIndicator": "moved",
       "link": "https://www.synthesia.io"
     },
     {
-      "id": "pytorch",
-      "name": "PyTorch",
-      "category": "ai-models-frameworks",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://pytorch.org"
-    },
-    {
-      "id": "tensorflow",
-      "name": "TensorFlow",
-      "category": "ai-models-frameworks",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://www.tensorflow.org"
-    },
-    {
-      "id": "scikit-learn",
-      "name": "Scikit-learn",
-      "category": "ai-models-frameworks",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://scikit-learn.org"
-    },
-    {
-      "id": "huggingface",
-      "name": "Hugging Face Transformers",
-      "category": "ai-models-frameworks",
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "category": "applied-ai-solutions",
       "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://huggingface.co/transformers"
+      "changeIndicator": "up",
+      "link": "https://elevenlabs.io/"
     },
     {
-      "id": "mlflow",
-      "name": "MLFlow",
-      "category": "ai-models-frameworks",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://mlflow.org"
+      "id": "eu-ai-act",
+      "name": "EU AI Act",
+      "category": "governance-enablement",
+      "ring": "implement",
+      "changeIndicator": "moved",
+      "link": "https://digital-strategy.ec.europa.eu/de/policies/regulatory-framework-ai"
     },
     {
-      "id": "deepmind-blog",
-      "name": "DeepMind Blog",
-      "category": "ai-knowledge",
+      "id": "prompt-engineering",
+      "name": "Prompt Engineering Techniken",
+      "category": "governance-enablement",
       "ring": "implement",
       "changeIndicator": "same",
-      "link": "https://www.deepmind.com/blog"
+      "link": "https://docs.company-gpt.com/prompt-engineering/uebersicht/"
     },
     {
-      "id": "openai-blog",
-      "name": "OpenAI Blog",
-      "category": "ai-knowledge",
+      "id": "rag-technik",
+      "name": "RAG (Retrieval-Augmented Generation)",
+      "category": "governance-enablement",
       "ring": "implement",
       "changeIndicator": "same",
-      "link": "https://www.openai.com/blog"
-    },
-    {
-      "id": "google-ai-blog",
-      "name": "Google AI Blog",
-      "category": "ai-knowledge",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://ai.googleblog.com"
-    },
-    {
-      "id": "facebook-ai-blog",
-      "name": "Facebook AI Blog",
-      "category": "ai-knowledge",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://ai.facebook.com/blog"
-    },
-    {
-      "id": "arxiv",
-      "name": "arXiv",
-      "category": "ai-knowledge",
-      "ring": "implement",
-      "changeIndicator": "same",
-      "link": "https://arxiv.org"
-    },
-    {
-      "id": "infoq-ai",
-      "name": "InfoQ AI",
-      "category": "ai-knowledge",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://www.infoq.com/ai-ml-data-engineering"
+      "link": null
     },
     {
       "id": "gdpr",
-      "name": "GDPR",
-      "category": "ai-law-governance",
+      "name": "DSGVO (GDPR)",
+      "category": "governance-enablement",
       "ring": "implement",
       "changeIndicator": "same",
       "link": "https://commission.europa.eu/law/law-topic/data-protection_de"
     },
     {
-      "id": "ai-act",
-      "name": "AI Act",
-      "category": "ai-law-governance",
-      "ring": "pilot",
-      "changeIndicator": "same",
-      "link": "https://artificialintelligenceact.eu/de/"
+      "id": "openai-blog",
+      "name": "OpenAI Blog",
+      "category": "governance-enablement",
+      "ring": "implement",
+      "changeIndicator": "up",
+      "link": "https://www.openai.com/blog"
     },
     {
-      "id": "google-ai-principles",
-      "name": "Google AI Principles",
-      "category": "ai-law-governance",
-      "ring": "explore",
-      "changeIndicator": "same",
-      "link": "https://ai.google/principles"
+      "id": "responsible-ai",
+      "name": "Responsible AI Frameworks",
+      "category": "governance-enablement",
+      "ring": "pilot",
+      "changeIndicator": "up",
+      "link": null
     }
   ]
 }

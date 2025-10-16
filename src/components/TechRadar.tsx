@@ -175,7 +175,7 @@ export default function TechRadar({ categories, rings, entries }: TechRadarProps
                             {ring.name}
                           </Badge>
                           <span className="text-xs text-slate-500 font-medium">
-                            {ringEntries.length} {ringEntries.length === 1 ? 'technology' : 'technologies'}
+                            {ringEntries.length} {ringEntries.length === 1 ? 'Eintrag' : 'Einträge'}
                           </span>
                         </div>
                         <div className="flex flex-wrap gap-2">
