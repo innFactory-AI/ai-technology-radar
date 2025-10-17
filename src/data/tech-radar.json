@@ -202,6 +202,14 @@
       "link": "https://modelcontextprotocol.org/"
     },
     {
+      "id": "hey-gen",
+      "name": "HeyGen",
+      "category": "applied-ai-solutions",
+      "ring": "pilot",
+      "changeIndicator": "new",
+      "link": "https://www.heygen.com/"
+    },
+    {
       "id": "pgvector",
       "name": "pgvector",
       "category": "ai-core-tech",
